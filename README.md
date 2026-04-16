@@ -28,6 +28,7 @@ Configuration notes:
 
 - For project pages (`<user>.github.io/<repo>`), base path is auto-set to `/<repo>`.
 - For user/org pages (`<user>.github.io`), base path is empty.
+- Build path can be overridden with `BASE_PATH` when needed (for custom domains this should usually be empty).
 - Static output is generated in `out/` and deployed by GitHub Actions.
 
 Before deploying:
