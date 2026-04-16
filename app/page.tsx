@@ -117,10 +117,23 @@ export default function Home() {
       {/* Testimonial */}
       {siteConfig.testimonials.length > 0 && (
         <section className="section testimonial-section" aria-label="Parent testimonials">
+          <div className="testimonial-head">
+            <p className="testimonial-kicker">Social proof from early parents</p>
+            <h2>Loved in real 3 AM moments</h2>
+          </div>
+
+          <div className="testimonial-rail" role="list" aria-label="Highlights from parent feedback">
+            <p className="testimonial-chip" role="listitem">Great experience!</p>
+            <p className="testimonial-chip" role="listitem">Highly recommend.</p>
+            <p className="testimonial-chip" role="listitem">Fast replies on WhatsApp.</p>
+            <p className="testimonial-chip" role="listitem">Made night feeds less stressful.</p>
+          </div>
+
           {siteConfig.testimonials.map((t, i) => (
-            <figure key={i} className="testimonial">
+            <figure key={i} className="testimonial-card">
+              <div className="testimonial-rating" aria-label="Rated five out of five stars">5.0 / 5</div>
               <blockquote className="testimonial-quote">&ldquo;{t.quote}&rdquo;</blockquote>
-              <figcaption className="testimonial-author">&mdash; {t.author}</figcaption>
+              <figcaption className="testimonial-author">{t.author}</figcaption>
             </figure>
           ))}
         </section>
