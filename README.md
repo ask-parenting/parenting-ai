@@ -9,18 +9,6 @@ npm install
 npm run dev
 ```
 
-## Dev Troubleshooting
-
-If you see `Cannot find module './<chunk>.js'` from `.next/server/webpack-runtime.js`:
-
-```bash
-pkill -f "next dev" || true
-rm -rf .next
-npm run dev
-```
-
-This project disables webpack filesystem cache in dev (`next.config.mjs`) to avoid repeated cache corruption.
-
 ## Environment variables
 
 Create `.env.local`:
@@ -29,6 +17,25 @@ Create `.env.local`:
 NEXT_PUBLIC_WHATSAPP_NUMBER=919999999999
 NEXT_PUBLIC_LEGAL_ADDRESS=Your exact verification address line
 ```
+
+## GitHub Pages Deployment
+
+This project is configured for static export (`output: \"export\"`) and automatic deployment via:
+
+- `.github/workflows/deploy-pages.yml`
+
+Configuration notes:
+
+- For project pages (`<user>.github.io/<repo>`), base path is auto-set to `/<repo>`.
+- For user/org pages (`<user>.github.io`), base path is empty.
+- Static output is generated in `out/` and deployed by GitHub Actions.
+
+Before deploying:
+
+1. In GitHub repo settings, set **Pages** source to **GitHub Actions**.
+2. Add repository variables (optional but recommended):
+   - `NEXT_PUBLIC_WHATSAPP_NUMBER`
+   - `NEXT_PUBLIC_LEGAL_ADDRESS`
 
 ## Specs for future use
 

@@ -14,10 +14,12 @@ const body = Open_Sans({
   weight: ["400", "500", "600", "700"]
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://askparenting.com";
+
 export const metadata: Metadata = {
   title: "Parenting AI",
   description: "Your 24/7 digital co-parent in WhatsApp.",
-  metadataBase: new URL("https://askparenting.com")
+  metadataBase: new URL(siteUrl)
 };
 
 export default function RootLayout({
