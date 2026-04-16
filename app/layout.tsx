@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 
-const heading = Fraunces({
+const heading = Open_Sans({
   subsets: ["latin"],
-  variable: "--font-heading"
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700"]
 });
 
-const body = Manrope({
+const body = Open_Sans({
   subsets: ["latin"],
-  variable: "--font-body"
+  variable: "--font-body",
+  weight: ["400", "500", "600", "700"]
 });
 
 export const metadata: Metadata = {

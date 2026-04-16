@@ -9,6 +9,18 @@ npm install
 npm run dev
 ```
 
+## Dev Troubleshooting
+
+If you see `Cannot find module './<chunk>.js'` from `.next/server/webpack-runtime.js`:
+
+```bash
+pkill -f "next dev" || true
+rm -rf .next
+npm run dev
+```
+
+This project disables webpack filesystem cache in dev (`next.config.mjs`) to avoid repeated cache corruption.
+
 ## Environment variables
 
 Create `.env.local`:

@@ -11,8 +11,8 @@ export default function Home() {
     <main className="page-shell">
       <section className="hero section">
         <div className="topbar">
-          <p className="brand-mark">{siteConfig.brand}</p>
-          <p className="micro-tag">No app install</p>
+          <p className="brand-mark">{siteConfig.brand.toUpperCase()}</p>
+          <p className="micro-tag">Care via WhatsApp</p>
         </div>
 
         <div className="hero-grid">
@@ -21,10 +21,12 @@ export default function Home() {
             <h1>{siteConfig.headline}</h1>
             <p className="lead">{siteConfig.subheadline}</p>
             <div className="cta-row">
-              <a className="cta" href={whatsappLink} target="_blank" rel="noreferrer">
+              <a className="dji-btn dji-btn-primary" href={whatsappLink} target="_blank" rel="noreferrer">
                 Chat on WhatsApp
               </a>
-              <p className="cta-note">Starts with a pre-filled hello message.</p>
+              <a className="dji-learn-more" href="#value-proposition-title">
+                Learn More
+              </a>
             </div>
             <div className="trust-row" aria-label="Key service highlights">
               <span>24/7 support flow</span>
