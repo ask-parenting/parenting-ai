@@ -33,17 +33,19 @@ export const siteConfig = {
   ],
   trustSignals: [
     {
+      icon: "�",
       title: "Bank-Level Privacy",
-      description: "Your data is anonymized and securely stored."
+      description: "Your data is encrypted and fully anonymized."
     },
     {
+      icon: "⚡",
       title: "Total Control",
-      description: "Text 'DELETE' anytime to instantly wipe your child's data."
+      description: "Delete anytime to instantly remove all data."
     },
     {
+      icon: "✓",
       title: "Verified Knowledge",
-      description:
-        "Responses based on WHO and AAP pediatric guidelines — never random internet searches."
+      description: "Evidence-based from WHO and AAP guidelines."
     }
   ],
   onboardingSteps: [

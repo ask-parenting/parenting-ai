@@ -92,7 +92,8 @@ export default function Home() {
           <h2 id="trust-title">Your Family&rsquo;s Privacy is Our Promise</h2>
           <div className="trust-grid">
             {siteConfig.trustSignals.map((signal) => (
-              <div key={signal.title} className="trust-card">
+              <div key={signal.title} className="trust-item">
+                <div className="trust-icon">{signal.icon}</div>
                 <h3>{signal.title}</h3>
                 <p>{signal.description}</p>
               </div>
