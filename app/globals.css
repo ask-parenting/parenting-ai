@@ -46,16 +46,16 @@ body {
 }
 
 .page-shell {
-  width: min(1280px, 92vw);
+  width: min(1280px, 90vw);
   margin: 0 auto;
-  padding: 28px 0 96px;
+  padding: 40px 0 120px;
 }
 
 .section {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.98));
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-xl);
-  padding: clamp(28px, 3.4vw, 54px);
+  padding: clamp(36px, 4vw, 64px);
   backdrop-filter: saturate(160%) blur(18px);
   -webkit-backdrop-filter: saturate(160%) blur(18px);
   box-shadow: var(--shadow-soft);
@@ -63,15 +63,15 @@ body {
 }
 
 .hero {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .topbar.section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 18px;
-  padding: 16px 28px;
+  margin-bottom: 20px;
+  padding: 18px 32px;
   background: rgba(255, 255, 255, 0.84);
   border-color: rgba(255, 255, 255, 0.84);
 }
@@ -139,7 +139,7 @@ h1 {
 }
 
 .lead {
-  margin: 20px 0 30px;
+  margin: 24px 0 36px;
   font-size: clamp(20px, 2.2vw, 30px);
   line-height: 1.24;
   letter-spacing: -0.012em;
@@ -203,14 +203,15 @@ h1 {
 }
 
 .feature-strip {
-  margin-top: 38px;
+  margin-top: 48px;
   border-top: 1px solid var(--line-dark);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .feature-item {
-  padding-top: 22px;
+  padding-top: 26px;
+  padding-bottom: 8px;
   border-right: 1px solid var(--line-dark);
 }
 
@@ -380,28 +381,171 @@ h1 {
 }
 
 .value-props {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
+
+/* ── Pricing transparency ── */
+.pricing-transparency {
+  margin: 14px 0 0;
+  font-size: 13px;
+  color: rgba(233, 237, 242, 0.6);
+  letter-spacing: 0.02em;
+}
+
+/* ── Trust & Safety section ── */
+.trust-section {
+  margin-bottom: 32px;
+}
+
+.trust-section h2 {
+  font-size: clamp(28px, 3.8vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin-bottom: 36px;
+  max-width: 18ch;
+}
+
+.trust-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.trust-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(244, 245, 247, 0.88));
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  box-shadow: 0 4px 14px rgba(16, 17, 19, 0.05);
+}
+
+.trust-card h3 {
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
+}
+
+.trust-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* ── Onboarding steps ── */
+.onboarding-section {
+  margin-bottom: 32px;
+}
+
+.onboarding-section h2 {
+  font-size: clamp(28px, 3.8vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin-bottom: 36px;
+  max-width: 16ch;
+}
+
+.onboarding-steps {
+  list-style: none;
+  margin: 0 0 36px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 560px;
+  counter-reset: none;
+}
+
+.onboarding-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.onboarding-step:last-child {
+  border-bottom: none;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent-dji);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.onboarding-step p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  padding-top: 6px;
+}
+
+.onboarding-cta {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ── Testimonial ── */
+.testimonial-section {
+  margin-bottom: 32px;
+}
+
+.testimonial {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.testimonial-quote {
+  margin: 0;
+  font-size: clamp(22px, 2.8vw, 34px);
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  font-style: italic;
+  max-width: 36ch;
+}
+
+.testimonial-author {
+  font-size: 15px;
+  color: var(--text-secondary);
+  font-style: normal;
+}
+
+
 
 .value-props h2 {
   font-size: clamp(34px, 4.6vw, 64px);
   line-height: 1.06;
   letter-spacing: -0.035em;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
   max-width: 12ch;
 }
 
 .card-grid {
   display: grid;
-  gap: 16px;
+  gap: 20px;
 }
 
 .card {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 245, 247, 0.92));
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-lg);
-  padding: 26px;
-  min-height: 248px;
+  padding: 32px;
+  min-height: 260px;
   box-shadow: 0 8px 18px rgba(16, 17, 19, 0.07);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
@@ -437,8 +581,8 @@ h1 {
 }
 
 .footer {
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 
 .legal-line,
@@ -510,7 +654,10 @@ h1 {
 
 .topbar,
 .hero-grid,
+.trust-section,
+.onboarding-section,
 .value-props,
+.testimonial-section,
 .footer,
 .card {
   opacity: 0;
@@ -525,12 +672,24 @@ h1 {
   animation-delay: 120ms;
 }
 
+.trust-section {
+  animation-delay: 180ms;
+}
+
+.onboarding-section {
+  animation-delay: 220ms;
+}
+
 .value-props {
-  animation-delay: 200ms;
+  animation-delay: 260ms;
+}
+
+.testimonial-section {
+  animation-delay: 300ms;
 }
 
 .footer {
-  animation-delay: 280ms;
+  animation-delay: 340ms;
 }
 
 .card:nth-child(1) {
@@ -548,7 +707,10 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   .topbar,
   .hero-grid,
+  .trust-section,
+  .onboarding-section,
   .value-props,
+  .testimonial-section,
   .footer,
   .card {
     animation: none;
@@ -574,19 +736,19 @@ h1 {
 
 @media (max-width: 979px) {
   .page-shell {
-    width: 94vw;
-    padding-top: 14px;
-    padding-bottom: 60px;
+    width: 92vw;
+    padding-top: 24px;
+    padding-bottom: 80px;
   }
 
   .section {
-    border-radius: 22px;
-    padding: 24px;
+    border-radius: 24px;
+    padding: 32px;
   }
 
   .topbar.section {
-    margin-bottom: 14px;
-    padding: 15px 22px;
+    margin-bottom: 16px;
+    padding: 16px 24px;
   }
 
   h1,
@@ -607,8 +769,12 @@ h1 {
   .feature-item {
     border-right: none;
     border-bottom: 1px solid var(--line-dark);
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .feature-item:last-child {
@@ -627,19 +793,19 @@ h1 {
 
 @media (max-width: 768px) {
   .page-shell {
-    width: 95vw;
-    padding-top: 10px;
-    padding-bottom: 52px;
+    width: 93vw;
+    padding-top: 20px;
+    padding-bottom: 72px;
   }
 
   .section,
   .hero-grid.section {
-    padding: 20px;
-    border-radius: 20px;
+    padding: 28px;
+    border-radius: 22px;
   }
 
   .topbar.section {
-    padding: 14px 16px;
+    padding: 15px 20px;
   }
 
   .micro-tag {
@@ -653,7 +819,7 @@ h1 {
   }
 
   .lead {
-    margin: 16px 0 22px;
+    margin: 20px 0 28px;
     font-size: clamp(18px, 5.6vw, 24px);
     line-height: 1.32;
   }
@@ -677,12 +843,12 @@ h1 {
   }
 
   .feature-strip {
-    margin-top: 26px;
+    margin-top: 32px;
   }
 
   .feature-item {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .hero-aside {
@@ -694,16 +860,33 @@ h1 {
   }
 
   .value-props h2 {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     max-width: 14ch;
   }
 
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .onboarding-steps {
+    max-width: 100%;
+  }
+
+  .onboarding-cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .testimonial-quote {
+    max-width: none;
+  }
+
   .card-grid {
-    gap: 12px;
+    gap: 16px;
   }
 
   .card {
-    padding: 20px;
+    padding: 26px;
   }
 
   .legal-page p {
@@ -719,17 +902,17 @@ h1 {
 
 @media (max-width: 420px) {
   .page-shell {
-    width: 96vw;
+    width: 94vw;
   }
 
   .section,
   .hero-grid.section {
-    padding: 16px;
-    border-radius: 18px;
+    padding: 22px;
+    border-radius: 20px;
   }
 
   .topbar.section {
-    padding: 12px 14px;
+    padding: 14px 18px;
   }
 
   .brand-mark {
