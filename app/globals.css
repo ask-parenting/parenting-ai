@@ -31,6 +31,10 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family);
   font-size: 17px;
@@ -71,6 +75,12 @@ body {
   margin-bottom: 32px;
 }
 
+#value-proposition-title,
+#trust-title,
+#onboarding-title {
+  scroll-margin-top: 96px;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -86,8 +96,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 22px;
   min-height: 64px;
   padding: 14px 0;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
 }
 
 .brand-mark {
@@ -106,6 +124,53 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-tertiary);
+}
+
+.topbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 2.2vw, 30px);
+  flex: 1;
+}
+
+.topbar-nav a {
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  color: #1e232c;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+}
+
+.topbar-nav a:hover,
+.topbar-nav a:focus-visible {
+  color: #000;
+}
+
+.nav-signup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 16px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-signup:hover,
+.nav-signup:focus-visible {
+  background: #252525;
+  transform: translateY(-1px);
 }
 
 .hero-grid.section {
@@ -174,46 +239,50 @@ h1 {
 
 .dji-btn {
   display: inline-block;
-  color: #fff;
-  min-height: 44px;
-  font-size: 17px;
+  color: #111;
+  min-height: 42px;
+  font-size: 15px;
   line-height: 1;
-  padding: 13px 24px;
+  padding: 12px 24px;
   border: none;
   border-radius: var(--radius-pill);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   text-decoration: none;
-  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .dji-btn-primary {
-  background: linear-gradient(135deg, #ff9448 0%, #ff7421 100%);
-  box-shadow: 0 7px 18px rgba(255, 116, 33, 0.26);
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.26);
 }
 
 .dji-btn-primary:hover,
 .dji-btn-primary:focus-visible {
-  background: linear-gradient(135deg, #ffa25f 0%, #ff8232 100%);
-  box-shadow: 0 9px 20px rgba(255, 126, 40, 0.3);
+  background: #f1f2f4;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
   transform: translateY(-1px);
 }
 
 .dji-learn-more {
   display: inline-flex;
   align-items: center;
-  min-height: 44px;
+  min-height: 42px;
   padding: 0 6px;
-  font-size: 19px;
+  font-size: 15px;
   line-height: 1;
-  color: #7fb8f4;
+  color: #dbe2eb;
   text-decoration: none;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .dji-learn-more:hover,
 .dji-learn-more:focus-visible {
-  color: #9ecbf8;
+  color: #ffffff;
 }
 
 .feature-strip {
@@ -869,6 +938,10 @@ h1 {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .topbar,
   .hero-grid,
   .trust-section,
@@ -917,6 +990,20 @@ h1 {
   .topbar {
     min-height: 58px;
     padding: 12px 0;
+  }
+
+  .topbar-nav {
+    gap: 14px;
+  }
+
+  .topbar-nav a {
+    font-size: 13px;
+  }
+
+  .nav-signup {
+    min-height: 34px;
+    padding: 0 14px;
+    font-size: 12px;
   }
 
   h1,
@@ -988,6 +1075,20 @@ h1 {
   .topbar {
     min-height: 54px;
     padding: 10px 0;
+  }
+
+  .topbar-left {
+    gap: 10px;
+  }
+
+  .topbar-nav {
+    display: none;
+  }
+
+  .nav-signup {
+    min-height: 32px;
+    padding: 0 12px;
+    font-size: 11px;
   }
 
   .micro-tag {
@@ -1128,6 +1229,11 @@ h1 {
   .topbar {
     min-height: 50px;
     padding: 9px 0;
+  }
+
+  .nav-signup {
+    min-height: 30px;
+    padding: 0 11px;
   }
 
   .brand-mark {

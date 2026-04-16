@@ -11,8 +11,20 @@ export default function Home() {
     <>
       <header className="site-header" aria-label="Site header">
         <div className="topbar shell-inner">
-          <p className="brand-mark">{siteConfig.brand.toUpperCase()}</p>
-          <p className="micro-tag">Care via WhatsApp</p>
+          <div className="topbar-left">
+            <p className="brand-mark">{siteConfig.brand.toUpperCase()}</p>
+            <p className="micro-tag">Care via WhatsApp</p>
+          </div>
+
+          <nav className="topbar-nav" aria-label="Primary">
+            <a href="#trust-title">Trust</a>
+            <a href="#onboarding-title">Pricing</a>
+            <a href="#value-proposition-title">How It Works</a>
+          </nav>
+
+          <a className="nav-signup" href={whatsappLink} target="_blank" rel="noreferrer">
+            Sign Up
+          </a>
         </div>
       </header>
 
