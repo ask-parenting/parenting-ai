@@ -119,7 +119,7 @@ export default function Home() {
 
         {/* Value Pillars */}
         <section className="section value-props" aria-labelledby="value-proposition-title">
-          <h2 id="value-proposition-title">How It Works: Your Village in a Chat</h2>
+          <h2 id="value-proposition-title">How It Works:</h2>
           <div className="card-grid">
             {siteConfig.valuePillars.map((pillar, index) => (
               <article key={pillar.title} className="card">
