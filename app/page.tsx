@@ -52,7 +52,7 @@ export default function Home() {
       <header className="site-header" aria-label="Site header">
         <div className="topbar shell-inner">
           <div className="topbar-left">
-            <p className="brand-mark">{siteConfig.brand.toUpperCase()}</p>
+            <p className="brand-mark">{siteConfig.brand}</p>
             <p className="micro-tag">Care via WhatsApp</p>
           </div>
 
@@ -154,7 +154,7 @@ export default function Home() {
               </li>
             ))}
           </ol>
-          <p>No apps. No signups. Just support when you need it.</p>
+          <p className="onboarding-note">No apps. No signups. Just support when you need it.</p>
           <a className="dji-btn dji-btn-primary onboarding-cta" href={whatsappLink} target="_blank" rel="noreferrer">
             👉 Start on WhatsApp
           </a>
@@ -165,12 +165,12 @@ export default function Home() {
           <div className="card-grid">
             {whyParentsLove.map((point, index) => (
               <article key={point} className="card">
-                <p className="card-index">✔ {String(index + 1).padStart(2, "0")}</p>
+                <p className="card-index">✔</p>
                 <h3>{point}</h3>
               </article>
             ))}
           </div>
-          <p>Because parenting doesn&apos;t come with a manual—but now, it comes with a guide.</p>
+          <p className="value-props-note">Because parenting doesn&apos;t come with a manual—but now, it comes with a guide.</p>
         </section>
 
         <section className="section about-section" aria-labelledby="about-title">
