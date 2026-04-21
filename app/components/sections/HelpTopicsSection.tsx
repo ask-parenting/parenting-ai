@@ -14,7 +14,7 @@ export default function HelpTopicsSection() {
         {helpTopics.map((item) => (
           <div key={item.title} className="trust-item">
             <div className="trust-icon">{item.icon}</div>
-            <div>
+            <div className="trust-item-body">
               <h3>{item.title}</h3>
               <p>{item.question}</p>
               <p>{item.description}</p>
