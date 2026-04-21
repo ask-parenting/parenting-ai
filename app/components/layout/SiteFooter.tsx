@@ -19,8 +19,14 @@ const companyLinks = [
 
 export default function SiteFooter({ whatsappLink }: SiteFooterProps) {
   const handleFooterCtaClick = () => {
-    if (typeof window !== "undefined" && typeof (window as { gtag?: Function }).gtag === "function") {
-      (window as { gtag: Function }).gtag("event", "whatsapp_cta_click", {
+    if (typeof window === "undefined") return;
+
+    const gtag = (window as Window & {
+      gtag?: (...args: unknown[]) => void;
+    }).gtag;
+
+    if (typeof gtag === "function") {
+      gtag("event", "whatsapp_cta_click", {
         location: "footer",
       });
     }
