@@ -5,7 +5,7 @@ export const siteConfig = {
     subheadline:
       "No apps to download. Just text us at 3:00 AM for milestone tracking, feeding logs, and instant peace of mind. We cater from pre-delivery tips up to 5 years of age.",
     pricingTransparency: "Join our free beta program.",
-    ctaText: "Chat on WhatsApp"
+    ctaText: "Start on WhatsApp"
   },
   whatsapp: {
     businessNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "YOUR_BUSINESS_NUMBER",
@@ -33,9 +33,9 @@ export const siteConfig = {
   ],
   trustSignals: [
     {
-      icon: "�",
+      icon: "🔒",
       title: "Bank-Level Privacy",
-      description: "Your data is encrypted and fully anonymized."
+      description: "Your data is encrypted in transit and at rest."
     },
     {
       icon: "⚡",
@@ -45,7 +45,7 @@ export const siteConfig = {
     {
       icon: "✓",
       title: "Verified Knowledge",
-      description: "Evidence-based from WHO and AAP guidelines."
+      description: "Guidance informed by WHO and AAP public recommendations."
     }
   ],
   onboardingSteps: [

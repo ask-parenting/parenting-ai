@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { siteConfig } from "@/lib/site-config";
 
 interface SiteHeaderProps {
@@ -11,6 +14,16 @@ const navLinks = [
 ];
 
 export default function SiteHeader({ whatsappLink }: SiteHeaderProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleHeaderCtaClick = () => {
+    if (typeof window !== "undefined" && typeof (window as { gtag?: Function }).gtag === "function") {
+      (window as { gtag: Function }).gtag("event", "whatsapp_cta_click", {
+        location: "header",
+      });
+    }
+  };
+
   return (
     <header className="site-header" aria-label="Site header">
       <div className="topbar shell-inner">
@@ -19,9 +32,19 @@ export default function SiteHeader({ whatsappLink }: SiteHeaderProps) {
           <p className="micro-tag">Care via WhatsApp</p>
         </div>
 
-        <nav className="topbar-nav" aria-label="Primary">
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-expanded={menuOpen}
+          aria-controls="primary-nav"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          Menu
+        </button>
+
+        <nav id="primary-nav" className={`topbar-nav ${menuOpen ? "open" : ""}`} aria-label="Primary">
           {navLinks.map(({ href, label }) => (
-            <a key={href} href={href}>
+            <a key={href} href={href} onClick={() => setMenuOpen(false)}>
               {label}
             </a>
           ))}
@@ -31,7 +54,9 @@ export default function SiteHeader({ whatsappLink }: SiteHeaderProps) {
           className="nav-signup"
           href={whatsappLink}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
+          aria-label="Start on WhatsApp (opens in a new tab)"
+          onClick={handleHeaderCtaClick}
         >
           Start on WhatsApp
         </a>

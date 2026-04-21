@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://askparenting.com/sitemap.xml

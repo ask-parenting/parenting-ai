@@ -1,3 +1,5 @@
+"use client";
+
 import { AnchorHTMLAttributes } from "react";
 
 interface CtaButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -13,6 +15,7 @@ export default function CtaButton({
   variant = "primary",
   fullWidth = false,
   className = "",
+  onClick,
   ...rest
 }: CtaButtonProps) {
   const classes = [
@@ -24,8 +27,28 @@ export default function CtaButton({
     .filter(Boolean)
     .join(" ");
 
+  const handleClick: AnchorHTMLAttributes<HTMLAnchorElement>["onClick"] = (event) => {
+    if (typeof onClick === "function") {
+      onClick(event);
+    }
+
+    if (typeof window !== "undefined" && typeof (window as { gtag?: Function }).gtag === "function") {
+      (window as { gtag: Function }).gtag("event", "whatsapp_cta_click", {
+        link_url: href,
+      });
+    }
+  };
+
   return (
-    <a href={href} className={classes} target="_blank" rel="noreferrer" {...rest}>
+    <a
+      {...rest}
+      href={href}
+      className={classes}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Start on WhatsApp (opens in a new tab)"
+      onClick={handleClick}
+    >
       {children}
     </a>
   );

@@ -12,7 +12,9 @@ export default function HeroSection({ whatsappLink }: HeroSectionProps) {
       <div className="hero-grid section">
         <div className="hero-main">
           <p className="eyebrow">Parenting support on WhatsApp</p>
-          <h1>Your Parenting Companion—on WhatsApp 👶</h1>
+          <h1>
+            Your Parenting Companion-on WhatsApp <span aria-hidden="true">👶</span>
+          </h1>
           <p className="lead">
             From feeding struggles to sleep worries, get calm, simple guidance
             for your child (0–5 yrs)

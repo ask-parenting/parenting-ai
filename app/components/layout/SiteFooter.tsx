@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 
@@ -16,6 +18,14 @@ const companyLinks = [
 ];
 
 export default function SiteFooter({ whatsappLink }: SiteFooterProps) {
+  const handleFooterCtaClick = () => {
+    if (typeof window !== "undefined" && typeof (window as { gtag?: Function }).gtag === "function") {
+      (window as { gtag: Function }).gtag("event", "whatsapp_cta_click", {
+        location: "footer",
+      });
+    }
+  };
+
   return (
     <footer className="footer" aria-label="Site footer">
       <div className="footer-shell shell-inner">
@@ -37,7 +47,13 @@ export default function SiteFooter({ whatsappLink }: SiteFooterProps) {
                   {label}
                 </a>
               ))}
-              <a href={whatsappLink} target="_blank" rel="noreferrer">
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp chat (opens in a new tab)"
+                onClick={handleFooterCtaClick}
+              >
                 WhatsApp Chat
               </a>
             </div>
@@ -55,7 +71,13 @@ export default function SiteFooter({ whatsappLink }: SiteFooterProps) {
 
             <div className="footer-col">
               <p className="footer-col-title">Contact</p>
-              <a href={whatsappLink} target="_blank" rel="noreferrer">
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp support (opens in a new tab)"
+                onClick={handleFooterCtaClick}
+              >
                 WhatsApp Support
               </a>
               <p className="footer-col-note">Response window: 24/7</p>
