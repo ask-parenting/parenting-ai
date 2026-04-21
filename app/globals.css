@@ -1126,6 +1126,13 @@ h1 {
     min-width: 40px;
     min-height: 36px;
     padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    order: 3;
+  }
+
+  .nav-signup {
+    order: 2;
     margin-left: auto;
     margin-right: 8px;
   }
