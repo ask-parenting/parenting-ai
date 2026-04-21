@@ -467,6 +467,29 @@ h1 {
   margin-bottom: 32px;
 }
 
+.about-section {
+  margin-bottom: 32px;
+}
+
+.about-section h2 {
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+
+.about-copy {
+  margin: 0 0 14px;
+  max-width: 92ch;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.about-copy:last-child {
+  margin-bottom: 0;
+}
+
 /* ── Pricing transparency ── */
 .pricing-transparency {
   margin: 14px 0 0;
@@ -920,6 +943,7 @@ h1 {
 .trust-section,
 .onboarding-section,
 .value-props,
+.about-section,
 .testimonial-section,
 .footer,
 .card {
@@ -947,12 +971,16 @@ h1 {
   animation-delay: 260ms;
 }
 
-.testimonial-section {
+.about-section {
   animation-delay: 300ms;
 }
 
+.testimonial-section {
+  animation-delay: 320ms;
+}
+
 .footer {
-  animation-delay: 340ms;
+  animation-delay: 360ms;
 }
 
 .card:nth-child(1) {
@@ -977,6 +1005,7 @@ h1 {
   .trust-section,
   .onboarding-section,
   .value-props,
+  .about-section,
   .testimonial-section,
   .footer,
   .card {

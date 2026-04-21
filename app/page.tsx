@@ -74,7 +74,7 @@ export default function Home() {
           <div className="hero-grid section">
             <div className="hero-main">
               <p className="eyebrow">Parenting support on WhatsApp</p>
-              <h1>Your Parenting Companion-on WhatsApp 👶</h1>
+              <h1>Your Parenting Companion—on WhatsApp 👶</h1>
               <p className="lead">
                 From feeding struggles to sleep worries, get calm, simple guidance for your child (0-5 yrs)
               </p>
@@ -127,7 +127,7 @@ export default function Home() {
         </section>
 
         <section className="section trust-section" aria-labelledby="helps-title">
-          <h2 id="helps-title">✨ Everything you worry about as a parent-handled gently</h2>
+          <h2 id="helps-title">✨ Everything you worry about as a parent—handled gently</h2>
           <div className="trust-grid">
             {helpTopics.map((item) => (
               <div key={item.title} className="trust-item">
@@ -170,7 +170,29 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <p>Because parenting doesn't come with a manual-but now, it comes with a guide.</p>
+          <p>Because parenting doesn&apos;t come with a manual—but now, it comes with a guide.</p>
+        </section>
+
+        <section className="section about-section" aria-labelledby="about-title">
+          <h2 id="about-title">About Us</h2>
+          <p className="about-copy">
+            We are a team of IIM alumni, building a modern parenting companion for today&apos;s families.
+          </p>
+          <p className="about-copy">
+            Parenting was once guided by generations, where grandparents and close communities passed down invaluable wisdom. But for many new age parents today, that support system is no longer easily accessible.
+          </p>
+          <p className="about-copy">
+            At the same time, evolving lifestyles, nuclear families, and busy routines have made parenting more complex and often overwhelming.
+          </p>
+          <p className="about-copy">We created this platform to bridge that gap.</p>
+          <p className="about-copy">
+            Our parenting companion is designed to combine the warmth of traditional wisdom with the reliability of modern knowledge. It is informed by insights from thousands of trusted parenting resources, including books, global guidelines, and recommendations from doctors and pediatric experts, to provide guidance that is both practical and reassuring.
+          </p>
+          <p className="about-copy">Our mission is simple:</p>
+          <p className="about-copy">To give parents calm, reliable guidance anytime they need it.</p>
+          <p className="about-copy">
+            From feeding and sleep to milestones and everyday concerns, we are here to support you at every step, like a trusted guide always within reach.
+          </p>
         </section>
       </main>
 
@@ -178,25 +200,10 @@ export default function Home() {
         <div className="footer-shell shell-inner">
         <div className="footer-top">
           <div className="footer-brand-block">
-            <h2 className="footer-brand" id="about-title">About Us</h2>
-            <p className="footer-tagline">
-              We are a team of IIM alumni, building a modern parenting companion for today's families.
-            </p>
-            <p className="footer-tagline">
-              Parenting was once guided by generations, where grandparents and close communities passed down invaluable wisdom. But for many new age parents today, that support system is no longer easily accessible.
-            </p>
-            <p className="footer-tagline">
-              At the same time, evolving lifestyles, nuclear families, and busy routines have made parenting more complex and often overwhelming.
-            </p>
-            <p className="footer-tagline">We created this platform to bridge that gap.</p>
-            <p className="footer-tagline">
-              Our parenting companion is designed to combine the warmth of traditional wisdom with the reliability of modern knowledge. It is informed by insights from thousands of trusted parenting resources, including books, global guidelines, and recommendations from doctors and pediatric experts, to provide guidance that is both practical and reassuring.
-            </p>
-            <p className="footer-tagline">Our mission is simple:</p>
-            <p className="footer-tagline">To give parents calm, reliable guidance anytime they need it.</p>
-            <p className="footer-tagline">
-              From feeding and sleep to milestones and everyday concerns, we are here to support you at every step, like a trusted guide always within reach.
-            </p>
+            <p className="footer-brand">{siteConfig.brand}</p>
+            <p className="footer-tagline">Your parenting companion, available 24/7 on WhatsApp.</p>
+            <p className="footer-address-label">Registered Address</p>
+            <p className="address">{siteConfig.legal.address}</p>
           </div>
 
           <nav className="footer-columns" aria-label="Footer navigation">
