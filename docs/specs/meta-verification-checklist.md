@@ -9,12 +9,14 @@
 - [ ] Terms of Service page is publicly reachable.
 
 ## WhatsApp CTA
-- [ ] Button text is `Chat on WhatsApp`.
+- [ ] Header CTA text is `Start Chat`.
+- [ ] Section CTA text is `Start on WhatsApp`.
 - [ ] Link uses `wa.me` deep link format.
 - [ ] Link includes prefilled greeting.
 
 ## Pre-Submission QA
 - [ ] Verify mobile render for iPhone/Android viewport.
+- [ ] Verify mobile header shows a working hamburger menu.
 - [ ] Confirm no broken links.
 - [ ] Confirm legal copy matches latest compliance-approved text.
 - [ ] Confirm policies include effective date and operator entity.

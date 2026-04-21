@@ -39,13 +39,16 @@ export default function SiteHeader({ whatsappLink }: SiteHeaderProps) {
         </div>
 
         <button
-          className="menu-toggle"
+          className={`menu-toggle ${menuOpen ? "open" : ""}`}
           type="button"
           aria-expanded={menuOpen}
           aria-controls="primary-nav"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
           onClick={() => setMenuOpen((open) => !open)}
         >
-          Menu
+          <span className="menu-toggle-line" aria-hidden="true" />
+          <span className="menu-toggle-line" aria-hidden="true" />
+          <span className="menu-toggle-line" aria-hidden="true" />
         </button>
 
         <nav id="primary-nav" className={`topbar-nav ${menuOpen ? "open" : ""}`} aria-label="Primary">
@@ -61,10 +64,10 @@ export default function SiteHeader({ whatsappLink }: SiteHeaderProps) {
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Start on WhatsApp (opens in a new tab)"
+          aria-label="Start Chat on WhatsApp (opens in a new tab)"
           onClick={handleHeaderCtaClick}
         >
-          Start on WhatsApp
+          Start Chat
         </a>
       </div>
     </header>
