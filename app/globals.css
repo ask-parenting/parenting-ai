@@ -232,6 +232,7 @@ h1 {
 
 /* ── Buttons — Apple style ── */
 .dji-btn {
+  touch-action: manipulation;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1044,21 +1045,56 @@ h1 {
   }
 
   .dji-btn {
-    min-height: 44px;
+    width: 100%;
+    min-height: 48px;
     font-size: 17px;
+    justify-content: center;
   }
 
+  /* Hide chat widget on mobile — keeps hero tight */
+  .wa-window {
+    display: none;
+  }
+
+  /* Feature strip: keep 3-col on mobile (short labels) */
   .feature-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-top: 28px;
   }
 
   .feature-item {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    border-right: 1px solid var(--line-dark);
+    border-bottom: none;
+    padding: 16px 8px 8px 0;
   }
 
+  .feature-item + .feature-item {
+    padding-left: 8px;
+  }
+
+  .feature-item:last-child {
+    border-right: none;
+  }
+
+  /* Trust cards: horizontal layout (icon + text side by side) */
   .trust-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .trust-item {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .trust-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    flex-shrink: 0;
+    margin-top: 2px;
   }
 
   .onboarding-steps {
