@@ -1346,8 +1346,8 @@ h1 {
     left: 0;
     right: 0;
     top: 48px;
-    background: #fff;
-    border-bottom: 1px solid var(--line);
+    background: transparent;
+    border-bottom: none;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease;
@@ -1356,6 +1356,8 @@ h1 {
   }
 
   .topbar-nav.open {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
     max-height: 180px;
   }
 
