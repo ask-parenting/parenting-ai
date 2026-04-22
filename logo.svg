@@ -46,7 +46,7 @@
       C74.8 89.2 95 70.4 95 47.2
       C95 24 74.8 4 50 4
       Z
-    " fill="url(#bubbleFill)" stroke="rgb(48,111,220)" stroke-width="3.5" stroke-linejoin="round"/>
+    " fill="url(#bubbleFill)" stroke="rgb(48,111,220)" stroke-width="6" stroke-linejoin="round"/>
   </g>
 
   <!-- Cupped hand -->
