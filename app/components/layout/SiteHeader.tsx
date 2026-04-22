@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -40,7 +39,7 @@ export default function SiteHeader({ whatsappLink }: SiteHeaderProps) {
       <div className="topbar shell-inner">
         <div className="topbar-left">
           <Link className="brand-link" href="/" aria-label="Go to Parenting AI homepage">
-            <Image src="/logo.svg" alt="Parenting AI logo" width={28} height={28} className="brand-logo" />
+            <img src="/logo.svg" alt="Parenting AI logo" width={28} height={29} className="brand-logo" />
             <p className="brand-mark">{siteConfig.brand}</p>
           </Link>
           <p className="micro-tag">Care via WhatsApp</p>

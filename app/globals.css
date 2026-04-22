@@ -133,8 +133,9 @@ body {
 
 .brand-logo {
   width: 28px;
-  height: 28px;
+  height: auto;
   object-fit: contain;
+  display: block;
 }
 
 .brand-mark {
@@ -1532,7 +1533,7 @@ h1 {
 
   .brand-logo {
     width: 24px;
-    height: 24px;
+    height: auto;
   }
 
   h1 {
