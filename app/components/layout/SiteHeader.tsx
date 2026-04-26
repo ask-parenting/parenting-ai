@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { whatsappOptInConsentText } from "@/lib/content";
 import { siteConfig } from "@/lib/site-config";
 
 interface SiteHeaderProps {
@@ -68,16 +69,29 @@ export default function SiteHeader({ whatsappLink }: SiteHeaderProps) {
               ))}
             </nav>
 
-            <a
-              className="nav-signup"
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Start Chat on WhatsApp (opens in a new tab)"
-              onClick={handleHeaderCtaClick}
-            >
-              Start Chat
-            </a>
+            <div className="nav-cta-group">
+              <a
+                className="nav-signup"
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Start Chat on WhatsApp (opens in a new tab)"
+                onClick={handleHeaderCtaClick}
+              >
+                Start Chat
+              </a>
+              <button
+                type="button"
+                className="nav-cta-info"
+                aria-label="Consent info"
+                aria-describedby="nav-cta-consent"
+              >
+                i
+              </button>
+              <div id="nav-cta-consent" className="nav-cta-tooltip" role="tooltip">
+                {whatsappOptInConsentText}
+              </div>
+            </div>
           </>
         ) : null}
       </div>
