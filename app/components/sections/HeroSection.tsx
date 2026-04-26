@@ -1,6 +1,6 @@
 import CtaButton from "@/app/components/ui/CtaButton";
 import WhatsAppWindow from "@/app/components/ui/WhatsAppWindow";
-import { heroStats } from "@/lib/content";
+import { heroStats, whatsappOptInConsentText } from "@/lib/content";
 
 interface HeroSectionProps {
   whatsappLink: string;
@@ -23,6 +23,8 @@ export default function HeroSection({ whatsappLink }: HeroSectionProps) {
           <div className="cta-row">
             <CtaButton href={whatsappLink}>Start on WhatsApp</CtaButton>
           </div>
+
+          <p className="cta-consent">{whatsappOptInConsentText}</p>
 
           <p className="pricing-transparency">
             No apps. No signup. Instant support.

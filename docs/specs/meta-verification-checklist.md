@@ -4,7 +4,9 @@
 - [ ] HTTPS is active on production domain.
 - [ ] Footer includes exact string:
   - `Parenting AI is a product of AvNeer Solutions Private Limited.`
+- [ ] Footer includes exact CIN string from MCA records.
 - [ ] Footer includes exact physical address that matches utility bill/bank statement word-for-word.
+- [ ] Footer includes support/contact email.
 - [ ] FAQ page is publicly reachable.
 - [ ] Privacy Policy page is publicly reachable.
 - [ ] Terms of Service page is publicly reachable.
@@ -12,6 +14,7 @@
 ## WhatsApp CTA
 - [ ] Header CTA text is `Start Chat`.
 - [ ] Section CTA text is `Start on WhatsApp`.
+- [ ] Section CTA consent text appears directly below both section CTA buttons.
 - [ ] Link uses `wa.me` deep link format.
 - [ ] Link includes prefilled greeting.
 

@@ -11,12 +11,17 @@
   - Fallback: `YOUR_BUSINESS_NUMBER`
 - `siteConfig.whatsapp.prefilledText`: prefilled first message for deep link.
 - `siteConfig.legal.ownershipStatement`: legal ownership statement (must stay exact).
+- `siteConfig.legal.cin`:
+  - Source: `NEXT_PUBLIC_LEGAL_CIN`
+  - Fallback: placeholder requiring replacement.
 - `siteConfig.legal.address`:
   - Source: `NEXT_PUBLIC_LEGAL_ADDRESS`
   - Fallback: placeholder requiring replacement.
+- `siteConfig.legal.contactEmail`: footer support/contact email.
 - `siteConfig.legal.links[]`: policy links used in footer (Privacy, Terms).
 - `helpTopics[]`: icon/title/question/description cards for "What It Helps With".
 - `howItWorksSteps[]`: ordered steps in "How It Works" section.
+- `whatsappOptInConsentText`: consent disclosure rendered below section CTA buttons.
 - `whyParentsLove[]`: concise benefit points in "Why Parents Love" section.
 - `heroStats[]`: compact hero proof strip values.
 - `faqs[]`: question/answer pairs for FAQ section.
@@ -24,6 +29,7 @@
 
 ## Deployment Inputs
 - `NEXT_PUBLIC_WHATSAPP_NUMBER`: digits with country code, no `+`, no spaces.
+- `NEXT_PUBLIC_LEGAL_CIN`: exact CIN from MCA records.
 - `NEXT_PUBLIC_LEGAL_ADDRESS`: exact address text for Meta verification.
 
 ## Change Process

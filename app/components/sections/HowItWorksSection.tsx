@@ -1,5 +1,5 @@
 import CtaButton from "@/app/components/ui/CtaButton";
-import { howItWorksSteps } from "@/lib/content";
+import { howItWorksSteps, whatsappOptInConsentText } from "@/lib/content";
 
 interface HowItWorksSectionProps {
   whatsappLink: string;
@@ -31,6 +31,8 @@ export default function HowItWorksSection({
       <CtaButton href={whatsappLink} className="onboarding-cta">
         Start on WhatsApp
       </CtaButton>
+
+      <p className="cta-consent">{whatsappOptInConsentText}</p>
     </section>
   );
 }

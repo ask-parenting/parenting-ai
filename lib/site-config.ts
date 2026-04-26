@@ -13,9 +13,13 @@ export const siteConfig = {
   },
   legal: {
     ownershipStatement: "Parenting AI is a product of AvNeer Solutions Private Limited.",
+    cin:
+      process.env.NEXT_PUBLIC_LEGAL_CIN ??
+      "[REPLACE_WITH_EXACT_MCA_CIN]",
     address:
       process.env.NEXT_PUBLIC_LEGAL_ADDRESS ??
       "[REPLACE_WITH_EXACT_META_VERIFICATION_ADDRESS]",
+    contactEmail: "hello@askparenting.com",
     links: [
       { label: "Privacy Policy", url: "/privacy" },
       { label: "Terms of Service", url: "/terms" }

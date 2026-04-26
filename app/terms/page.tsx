@@ -42,6 +42,11 @@ export default function TermsPage() {
           prior notice.
         </p>
         <p>
+          This service operates through WhatsApp, a platform owned by Meta Platforms, Inc. Your use of
+          WhatsApp is also governed by WhatsApp&apos;s Terms of Service and Privacy Policy. We are not
+          responsible for the availability or conduct of the WhatsApp platform.
+        </p>
+        <p>
           To the maximum extent allowed by law, the service is provided on an as-is and as-available basis,
           without warranties of uninterrupted operation or error-free output.
         </p>

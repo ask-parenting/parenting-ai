@@ -44,8 +44,6 @@ export default function SiteFooter({ whatsappLink }: SiteFooterProps) {
             <p className="footer-tagline">
               Your parenting companion, available 24/7 on WhatsApp.
             </p>
-            <p className="footer-address-label">Registered Address</p>
-            <p className="address">{siteConfig.legal.address}</p>
           </div>
 
           <nav className="footer-columns" aria-label="Footer navigation">
@@ -98,6 +96,11 @@ export default function SiteFooter({ whatsappLink }: SiteFooterProps) {
 
         <div className="footer-bottom">
           <p className="legal-line">{siteConfig.legal.ownershipStatement}</p>
+          <p className="legal-line">CIN: {siteConfig.legal.cin}</p>
+          <p className="legal-line">{siteConfig.legal.address}</p>
+          <a className="legal-line legal-link" href={`mailto:${siteConfig.legal.contactEmail}`}>
+            {siteConfig.legal.contactEmail}
+          </a>
           <p className="footer-copy">
             &copy; {new Date().getFullYear()} {siteConfig.brand}. All rights
             reserved.

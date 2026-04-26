@@ -27,6 +27,11 @@ export default function PrivacyPage() {
           milestone context, and usage logs required for reliability and abuse prevention.
         </p>
         <p>
+          When you use our service via WhatsApp, we receive your WhatsApp phone number and the messages you
+          send us. This data is transmitted through Meta&apos;s WhatsApp platform and is subject to Meta&apos;s own
+          Privacy Policy in addition to ours.
+        </p>
+        <p>
           We use this data to operate the service, personalize responses, maintain safety, and improve quality.
           We do not use your data for unrelated advertising.
         </p>
@@ -35,8 +40,13 @@ export default function PrivacyPage() {
           Where required, we apply contractual and technical safeguards.
         </p>
         <p>
-          We retain personal data only as long as needed for service delivery, legal obligations, and security.
-          Retention periods may vary by data type and legal requirement.
+          Conversation logs are retained for 90 days to support service continuity. Account identifiers are
+          retained until you request deletion. We delete data within 30 days of a valid deletion request.
+        </p>
+        <h2>Messaging opt-out</h2>
+        <p>
+          You can stop receiving messages from us at any time by replying STOP to any message, or by contacting
+          us at privacy@askparenting.com. We will process opt-out requests within 24 hours.
         </p>
         <p>
           You can request access, correction, or deletion of your data by contacting us through the legal entity

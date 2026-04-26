@@ -186,6 +186,9 @@ export const howItWorksSteps: string[] = [
   "Get calm, helpful guidance instantly",
 ];
 
+export const whatsappOptInConsentText =
+  "By messaging us, you agree to receive WhatsApp replies from Parenting AI (AvNeer Solutions Pvt Ltd). Reply STOP anytime to opt out.";
+
 export const heroStats: FeatureStat[] = [
   { value: "0 Apps", label: "Required" },
   { value: "0 Signup", label: "Friction" },
